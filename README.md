@@ -2,10 +2,17 @@
 
 Jeu de plateformes et d'action 2D dans le style metroidvania, avec une interface en français, une forêt dessinée sur canvas et un éditeur de niveaux intégré.
 
-**[Jouer en ligne](https://mr00mass.github.io/green-memories/)** · **[Consulter le code source](index.html)**
+**[Jouer en ligne](https://mr00mass.github.io/green-memories/)** · **[Télécharger le jeu Windows (.exe)](downloads/Green%20Memories.exe)** · **[Consulter le code source](index.html)**
+
+## Version Windows
+
+Le fichier [Green Memories.exe](downloads/Green%20Memories.exe) est une version autonome pour Windows, stockée avec Git LFS. Au premier lancement, le jeu est extrait automatiquement. Il n'est pas signé : Windows SmartScreen peut afficher un avertissement.
+
+Le téléchargement direct depuis GitHub fonctionne sans Git LFS. Pour récupérer ce fichier avec `git clone`, installez au préalable Git LFS.
 
 ## Sommaire
 
+- [Version Windows](#version-windows)
 - [Prérequis (requirements)](#prérequis-requirements)
 - [Clonage](#clonage)
 - [Environnement et lancement](#environnement-et-lancement)
@@ -78,9 +85,12 @@ Le dépôt contient :
 
 ```text
 green-memories/
-├── index.html    # Jeu : interface, styles, logique, dessins et images embarquées
-├── README.md     # Documentation
-└── .gitignore    # Fichiers système exclus de Git
+├── index.html          # Jeu : interface, styles, logique, dessins et images embarquées
+├── downloads/          # Version Windows autonome (Git LFS)
+│   └── Green Memories.exe
+├── media/              # Fichiers audio hébergés séparément
+├── README.md           # Documentation
+└── .gitignore          # Fichiers système exclus de Git
 ```
 
 Tout le code du jeu se trouve dans [index.html](index.html), sans fichier JavaScript ou CSS séparé. Les images utilisées par le code sont embarquées sous forme de données base64 ; une grande partie du décor est dessinée directement avec Canvas 2D.
